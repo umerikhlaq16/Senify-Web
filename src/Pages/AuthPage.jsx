@@ -1,117 +1,80 @@
 import React, { useState } from "react";
-import { auth, googleProvider } from "../firebase";
-import {
-createUserWithEmailAndPassword,
-signInWithEmailAndPassword,
-signInWithPopup
-} from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import LoginForm from "../components/LoginForm";
+import SignupForm from "../components/SignupForm";
 
 const AuthPage = () => {
-const [isLogin, setIsLogin] = useState(true);
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-const navigate = useNavigate();
+  const [isLogin, setIsLogin] = useState(true);
 
-const handleEmailAuth = async (e) => {
-e.preventDefault();
-try {
-if (isLogin) {
-await signInWithEmailAndPassword(auth, email, password);
-} else {
-await createUserWithEmailAndPassword(auth, email, password);
-}
-navigate("/dashboard");
-} catch (err) {
-alert(err.message);
-}
-};
+  return (
+    <div className="min-h-screen bg-[#eeeafb] flex items-center justify-center px-4">
+      
+      {/* Outer Rounded Card */}
+      <div className="relative w-full max-w-6xl bg-white/60 backdrop-blur-xl shadow-xl 
+        rounded-3xl p-10 flex flex-col md:flex-row items-center md:items-start gap-10">
 
-const handleGoogle = async () => {
-try {
-await signInWithPopup(auth, googleProvider);
-navigate("/dashboard");
-} catch (err) {
-alert(err.message);
-}
-};
+        {/* === Gradient Spot Background === */}
+        <div className="absolute inset-0 overflow-hidden rounded-3xl">
+          <div className="absolute w-96 h-96 bg-purple-400/40 blur-[120px] top-10 left-10"></div>
+          <div className="absolute w-80 h-80 bg-green-300/40 blur-[130px] bottom-10 left-20"></div>
+        </div>
 
-return ( <div className="flex items-center justify-center min-h-screen bg-black px-4">
-      {/* Outer Glassy Card with gradient spots */} 
-      <div className="relative w-full max-w-6xl bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row p-8 gap-6">
+        {/* LEFT SIDE CONTENT */}
+        <div className="relative z-10 md:w-1/2 p-4">
+          <h1 className="text-5xl font-extrabold text-gray-900 leading-tight">
+            Reconnecting Hearts.<br /> Empowering Lives.
+          </h1>
 
+          <div className="mt-10 space-y-8">
+            
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-purple-600"></span>
+                Stay Connected With Loved Ones
+              </h3>
+              <p className="text-gray-700 mt-2 max-w-sm">
+                Help families stay emotionally connected with elderly and disabled individuals even when life gets busy.
+              </p>
+            </div>
 
-    {/* Gradient Spots Overlay */}
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="w-72 h-72 bg-blue-300/40 rounded-full blur-3xl absolute -top-16 -left-16 animate-pulse"></div>
-      <div className="w-96 h-96 bg-purple-300/30 rounded-full blur-3xl absolute -bottom-20 -right-20 animate-pulse"></div>
-      <div className="w-64 h-64 bg-yellow-200/20 rounded-full blur-2xl absolute top-40 right-10 animate-pulse"></div>
-    </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-green-600"></span>
+                Empower Talent & Stories
+              </h3>
+              <p className="text-gray-700 mt-2 max-w-sm">
+                Provide a platform for those ignored by society to express themselves and showcase their talent.
+              </p>
+            </div>
 
-    {/* Left Side - Project Info */}
-    <div className="md:w-1/2 flex flex-col justify-center text-gray-800 p-6 relative z-10">
-      <h1 className="text-4xl font-extrabold mb-4 drop-shadow-lg">Welcome to <span className="text-purple-600">ProjectName</span></h1>
-      <p className="text-lg opacity-90 mb-4">
-        This project helps you manage tasks efficiently and stay organized. Access your personalized dashboard, track progress, and collaborate seamlessly.
-      </p>
-      <p className="text-sm opacity-70">
-        Experience the next level of productivity with an intuitive interface and smart features.
-      </p>
-    </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 flex items-center gap-3">
+                <span className="w-2 h-2 rounded-full bg-blue-600"></span>
+                Volunteers Making Real Impact
+              </h3>
+              <p className="text-gray-700 mt-2 max-w-sm">
+                Allow volunteers to support elderly and disabled users creating a more caring and connected community.
+              </p>
+            </div>
 
-    {/* Right Side - Inner Solid Card for Auth */}
-    <div className="md:w-1/2 bg-white rounded-2xl shadow-2xl p-8 flex flex-col justify-center relative z-10">
-      <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
-        {isLogin ? "Login" : "Create Account"}
-      </h2>
+          </div>
+        </div>
 
-      <form onSubmit={handleEmailAuth} className="flex flex-col gap-4">
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          required
-        />
-        <button
-          type="submit"
-          className="py-3 rounded-lg font-semibold text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600 transition-all shadow-md"
-        >
-          {isLogin ? "Login" : "Sign Up"}
-        </button>
-      </form>
+        {/* RIGHT SIDE – ONLY CALL FORM COMPONENT */}
+        <div className="relative z-10 w-full sm:w-3/4 md:w-1/2">
+          {/* Simple form container without extra bg/shadow */}
+          <div className="w-full max-w-md mx-auto">
+            
+            {isLogin ? (
+              <LoginForm switchToSignup={() => setIsLogin(false)} />
+            ) : (
+              <SignupForm switchToLogin={() => setIsLogin(true)} />
+            )}
+          </div> 
 
-      <button
-        onClick={handleGoogle}
-        className="mt-4 py-3 w-full rounded-lg font-semibold bg-red-500 text-white hover:bg-red-600 shadow-md transition-all"
-      >
-        Continue with Google
-      </button>
-
-      <p className="mt-4 text-gray-600 text-center text-sm">
-        {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-        <span
-          className="text-purple-600 cursor-pointer font-semibold hover:underline"
-          onClick={() => setIsLogin(!isLogin)}
-        >
-          {isLogin ? "Sign Up" : "Login"}
-        </span>
-      </p>
-    </div>
-
-  </div>
-</div>
-
-);
+          </div>
+        </div>
+      </div>
+  );
 };
 
 export default AuthPage;
