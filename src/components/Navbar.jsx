@@ -1,75 +1,65 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
- function Navbar() {
+function Navbar() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
   return (
-    <nav className="bg-[#EEEAFB]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <div className="shrink-0 flex items-center">
-  <img
-  src={logo}
-  alt="Senify Logo"
-  className="h-40 w-auto"
-/>
-</div>
+    <nav className="bg-[#EEEAFB] dark:bg-gray-800 px-6 py-2 transition-all">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-20">
 
-          {/* Menu Links */}
-          <div className="hidden md:flex space-x-6">
-            <a
-              href="#talent-showcase"
-              className="hover:text-purple-800 font-sm "
-            >
-              Talent Showcase
-            </a>
-            <a
-              href="#family-feed"
-              className="hover:text-purple-800 font-sm "
-            >
-              Family Feed
-            </a>
-            <a
-              href="#challenges"
-              className="hover:text-purple-800 font-sm "
-            >
-              Micro Challenges
-            </a>
-            <a
-              href="#volunteers"
-              className="hover:text-purple-800 font-sm "
-            >
-              Volunteers
-            </a>
-            <a
-              href="#ai-highlights"
-              className="hover:text-purple-800 font-sm "
-            >
-              AI Story
-            </a>
-          </div>
+        {/* LOGO */}
+        <div className="shrink-0 flex items-center">
+          <Link to="/"> {/* <-- Also make logo clickable to home */}
+            <img src={logo} alt="Senify Logo" className="h-40 w-auto cursor-pointer" />
+          </Link>
+        </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+        {/* RIGHT SIDE BUTTONS */}
+        <div className="flex items-center gap-4">
+
+          {/* THEME TOGGLE */}
+          <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-1 flex items-center gap-1">
             <button
-              className="text-white focus:outline-none"
-              onClick={() => alert("Mobile menu toggle")}
+              onClick={() => setTheme("light")}
+              className={`px-4 py-2 rounded-lg flex items-center gap-1 text-sm transition
+                ${theme === "light" ? "bg-purple-800 hover:bg-purple-900 text-white" : "text-gray-700 dark:text-gray-300"}`}
             >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              Light
+            </button>
+
+            <button
+              onClick={() => setTheme("dark")}
+              className={`px-4 py-2 rounded-lg flex items-center gap-1 text-sm transition
+                ${theme === "dark" ? "bg-purple-800 hover:bg-purple-900 text-white" : "text-gray-700 dark:text-gray-300"}`}
+            >
+              Dark
             </button>
           </div>
+
+          {/* LOGIN BUTTON */}
+          <Link to="/login">
+            <button className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-purple-900 transition font-medium">
+              Login
+            </button>
+          </Link>
+
+          {/* SIGNUP BUTTON */}
+          <Link to="/signup">
+            <button className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-purple-900 transition font-medium shadow-md">
+              Sign Up
+            </button>
+          </Link>
+
         </div>
       </div>
     </nav>

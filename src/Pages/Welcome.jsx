@@ -37,7 +37,7 @@ const Welcome = () => {
         </motion.h1>
         <div className="w-48 h-2 bg-gray-700 rounded-full overflow-hidden">
           <motion.div
-            className="h-full rounded-full bg-gradient-to-r from-blue-400 to-indigo-500"
+            className="h-full rounded-full bg-linear-to-r from-blue-400 to-indigo-500"
             style={{ width: `${progress}%` }}
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}

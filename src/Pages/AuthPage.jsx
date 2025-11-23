@@ -84,7 +84,7 @@ return ( <div className="flex items-center justify-center min-h-screen bg-black 
         />
         <button
           type="submit"
-          className="py-3 rounded-lg font-semibold text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600 transition-all shadow-md"
+          className="py-3 rounded-lg font-semibold text-lg bg-linear-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600 transition-all shadow-md"
         >
           {isLogin ? "Login" : "Sign Up"}
         </button>
