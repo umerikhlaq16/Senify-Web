@@ -48,14 +48,14 @@ function Navbar() {
 
           {/* LOGIN BUTTON */}
           <Link to="/login">
-            <button className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-purple-900 transition font-medium">
+            <button className="bg-purple-800 text-white px-5 py-2 rounded-lg hover:bg-purple-900 transition font-medium">
               Login
             </button>
           </Link>
 
           {/* SIGNUP BUTTON */}
           <Link to="/signup">
-            <button className="bg-purple-800 text-white px-6 py-3 rounded-lg hover:bg-purple-900 transition font-medium shadow-md">
+            <button className="bg-purple-800 text-white px-5 py-2 rounded-lg hover:bg-purple-900 transition font-medium shadow-md">
               Sign Up
             </button>
           </Link>
