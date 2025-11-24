@@ -15,12 +15,12 @@ export default function TalentShowcase() {
   };
 
   return (
-    <div className="px-20 py-8">
+    <div className="px-20 py-10">
       <div className="flex items-start justify-between gap-14 w-full">
 
         {/* -------- LEFT -------- */}
         <div className="w-[40%]">
-          <h1 className="text-5xl font-bold">Talent Showcase</h1>
+          <h1 className="text-4xl font-bold">Talent Showcase</h1>
           <p className="text-gray-600 text-md mt-3 leading-relaxed">
   Share your gift with the world 🌟 <br />
   Inspire others with your creativity and passion! <br />
