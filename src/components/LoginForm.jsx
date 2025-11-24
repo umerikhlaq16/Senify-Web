@@ -22,4 +22,5 @@ const LoginForm = ({ switchToSignup }) => {
   );
 };
 
+
 export default LoginForm;
