@@ -13,7 +13,7 @@ function Home() {
         <Navbar />
         <TalentShowcase />
         <FamilyFeed />
-        <div className="flex">
+        <div className="flex gap-6 px-[70px]">
         <MicroChallenges />
         <AiStory />
         </div>
