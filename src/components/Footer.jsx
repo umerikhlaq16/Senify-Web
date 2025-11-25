@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-8">
         
         {/* Main Footer Card */}
-        <div className="bg-white backdrop-blur-xl rounded-3xl shadow-lg border border-purple-100 py-10 px-14">
+        <div className="bg-white backdrop-blur-xl rounded-3xl shadow-lg border border-purple-100 py-5 px-8">
              <div className="flex space-x-4 mb-10 text-center justify-center">
                 <a href="#" className="p-3 bg-purple-100 rounded-xl hover:bg-purple-200 transition">
                   <Facebook size={20} className="text-purple-800" />

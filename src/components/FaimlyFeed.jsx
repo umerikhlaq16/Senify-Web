@@ -77,24 +77,15 @@ const FamilyFeed = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#EEEAFB]">
-      {/* Info Card */}
-      <div className="rounded-2xl p-2 mt-8 text-center">
-        <div className="w-12 h-12 bg-purple-900 rounded-full mx-auto mb-3 flex items-center justify-center">
-          <Heart className="w-6 h-6 text-white fill-current" />
-        </div>
-        <h3 className="text-xl font-bold text-gray-800 mb-2">
-          Family Feed<br />Stay Connected with Family
-        </h3>
-      </div>
+    <div className="h-[500px] bg-[#EEEAFB]">
 
       {/* Main Feed */}
-      <div className="max-w-8xl mx-auto px-4 py-8">
+      <div className="max-w-8xl mx-auto px-4 py-8 ">
         <div className="flex gap-6 justify-center flex-wrap pb-4">
           {posts.map((post) => (
             <div 
               key={post.id} 
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow w-96 flex flex-col"
+              className="bg-gray-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow w-96 flex flex-col"
               style={{ minHeight: '450px' }}
             >
               {/* Post Header */}
