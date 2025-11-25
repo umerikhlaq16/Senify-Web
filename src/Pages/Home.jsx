@@ -5,6 +5,7 @@ import FamilyFeed from '../components/FaimlyFeed.jsx';
 import Footer from '../components/Footer.jsx';
 import MicroChallenges from '../components/MicroChallenges.jsx';
 import AiStory from '../components/AiStory.jsx';
+import Volunteer from '../components/Volunteer.jsx';
 
 function Home() {
   return (
@@ -13,9 +14,10 @@ function Home() {
         <Navbar />
         <TalentShowcase />
         <FamilyFeed />
-        <div className="flex gap-6 px-[70px]">
+        <div className="flex gap-2 px-[70px]">
         <MicroChallenges />
         <AiStory />
+        <Volunteer/>
         </div>
         <Footer />
     </div>

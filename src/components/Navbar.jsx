@@ -28,10 +28,10 @@ function Navbar() {
         <div className="flex items-center gap-4">
 
           {/* THEME TOGGLE */}
-          <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-1 flex items-center gap-1">
+          <div className="bg-gray-200 dark:bg-gray-700 rounded-full p-1 flex items-center gap-1">
             <button
               onClick={() => setTheme("light")}
-              className={`px-4 py-2 rounded-lg flex items-center gap-1 text-sm transition
+              className={`px-4 py-1.5 rounded-full flex items-center gap-1 text-sm transition
                 ${theme === "light" ? "bg-purple-800 hover:bg-purple-900 text-white" : "text-gray-700 dark:text-gray-300"}`}
             >
               Light
@@ -39,7 +39,7 @@ function Navbar() {
 
             <button
               onClick={() => setTheme("dark")}
-              className={`px-4 py-2 rounded-lg flex items-center gap-1 text-sm transition
+              className={`px-4 py-1.5 rounded-full flex items-center gap-1 text-sm transition
                 ${theme === "dark" ? "bg-purple-800 hover:bg-purple-900 text-white" : "text-gray-700 dark:text-gray-300"}`}
             >
               Dark
@@ -48,14 +48,14 @@ function Navbar() {
 
           {/* LOGIN BUTTON */}
           <Link to="/login">
-            <button className="bg-purple-800 text-white px-5 py-2 rounded-lg hover:bg-purple-900 transition font-medium">
+            <button className="bg-purple-800 text-white px-5 py-2 rounded-full hover:bg-purple-900 transition font-medium">
               Login
             </button>
           </Link>
 
           {/* SIGNUP BUTTON */}
           <Link to="/signup">
-            <button className="bg-purple-800 text-white px-5 py-2 rounded-lg hover:bg-purple-900 transition font-medium shadow-md">
+            <button className="bg-purple-800 text-white px-5 py-2 rounded-full hover:bg-purple-900 transition font-medium shadow-md">
               Sign Up
             </button>
           </Link>

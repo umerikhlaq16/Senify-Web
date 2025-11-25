@@ -26,7 +26,7 @@ const AIStoryHighlight = () => {
   };
 
   return (
-    <div className="h-[400px] w-[200px] mt-12 p-4 rounded-3xl flex items-center justify-center">
+    <div className="h-[400px] w-[250px] mt-12 p-4 rounded-3xl flex items-center justify-center">
   <div >
 
         {/* Generate New Story Card */}
