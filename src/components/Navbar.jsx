@@ -14,7 +14,7 @@ function Navbar() {
   }, [theme]);
 
   return (
-    <nav className="bg-[#EEEAFB] dark:bg-gray-800 px-6 py-3 transition-all">
+    <nav className="bg-[#EEEAFB]  px-6 py-3 transition-all">
       <div className="max-w-7xl mx-auto flex justify-between items-center  h-14">
 
         {/* LOGO */}

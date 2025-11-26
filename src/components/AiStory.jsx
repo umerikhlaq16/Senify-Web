@@ -32,7 +32,7 @@ const AIStoryHighlight = () => {
         {/* Generate New Story Card */}
         <div 
           onClick={() => setShowGenerateModal(true)}
-          className="bg-linear-to-br from-purple-300 via-purple-500 to-purple-700 rounded-3xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all transform hover:scale-105"
+          className="bg-linear-to-br from-purple-600 via-purple-700 to-purple-700 rounded-3xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all transform hover:scale-105"
         >
           <div className="p-8 text-center text-white">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-purple-500 bg-opacity-20 backdrop-blur-sm rounded-full mb-4 border-4 border-white border-opacity-30">
@@ -54,7 +54,7 @@ const AIStoryHighlight = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-purple-500 to-pink-500 rounded-full mb-4">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-purple-700 to-purple-800 rounded-full mb-4">
                 {generatingStory ? (
                   <Sparkles className="w-10 h-10 text-white animate-spin" />
                 ) : (
@@ -68,9 +68,9 @@ const AIStoryHighlight = () => {
                   <p className="text-gray-600 mb-6">AI is analyzing activities and creating your personalized story highlight</p>
                   <div className="flex justify-center">
                     <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                      <div className="w-3 h-3 bg-pink-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                      <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                      <div className="w-3 h-3 bg-purple-700 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                      <div className="w-3 h-3 bg-purple-800 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                      <div className="w-3 h-3 bg-purple-700 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
                     </div>
                   </div>
                 </>
@@ -81,7 +81,7 @@ const AIStoryHighlight = () => {
                   {/* Generated Story Card */}
                   <div className="bg-linear-to-br from-purple-50 to-pink-50 rounded-2xl p-6 mb-6 text-left border-2 border-purple-200">
                     <div className="flex items-center space-x-2 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-linear-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                      <div className="w-10 h-10 rounded-full bg-linear-to-br from-purple-800 to-purple-900 flex items-center justify-center text-white font-bold">
                         {generatedStory.userName.split(' ').map(n => n[0]).join('')}
                       </div>
                       <div>
@@ -108,7 +108,7 @@ const AIStoryHighlight = () => {
 
                   <button
                     onClick={handleClose}
-                    className="w-full py-3 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-md"
+                    className="w-full py-3 bg-linear-to-r from-purple-800 to-purple-900 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-md"
                   >
                     Done
                   </button>
@@ -125,7 +125,7 @@ const AIStoryHighlight = () => {
                         onClick={() => setSelectedUser(user)}
                         className={`w-full py-3 px-4 rounded-xl font-semibold transition-all ${
                           selectedUser === user
-                            ? 'bg-linear-to-r from-purple-500 to-pink-500 text-white shadow-md'
+                            ? 'bg-linear-to-r from-purple-500 to-purple-700 text-white shadow-md'
                             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                         }`}
                       >
@@ -143,7 +143,7 @@ const AIStoryHighlight = () => {
                     </button>
                     <button
                       onClick={handleGenerateStory}
-                      className="flex-1 py-3 bg-linear-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-md"
+                      className="flex-1 py-3 bg-linear-to-r from-purple-500 to-purple-700 text-white rounded-xl font-semibold hover:opacity-90 transition-opacity shadow-md"
                     >
                       Generate
                     </button>
