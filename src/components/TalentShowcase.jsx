@@ -15,7 +15,7 @@ export default function TalentShowcase() {
   };
 
   return (
-    <div className="px-20 py-5">
+    <div className="px-20 py-5 mt-6">
       <div className="flex items-start justify-between gap-14 w-full">
 
         {/* -------- LEFT -------- */}

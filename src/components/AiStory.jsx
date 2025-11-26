@@ -32,7 +32,7 @@ const AIStoryHighlight = () => {
         {/* Generate New Story Card */}
         <div 
           onClick={() => setShowGenerateModal(true)}
-          className="bg-linear-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-3xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all transform hover:scale-105"
+          className="bg-linear-to-br from-purple-300 via-purple-500 to-purple-700 rounded-3xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all transform hover:scale-105"
         >
           <div className="p-8 text-center text-white">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-purple-500 bg-opacity-20 backdrop-blur-sm rounded-full mb-4 border-4 border-white border-opacity-30">

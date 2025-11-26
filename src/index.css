@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+
+
+/* Prevent horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}

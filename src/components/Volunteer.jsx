@@ -44,8 +44,8 @@ export default function VolunteerConnect() {
   };
 
   return (
-    <div className="h-[400px] w-[400px] bg-[#EEEAFB] py-12">
-      <div className="max-w-7xl">
+    <div className="h-[400px] w-[400px] bg-[#EEEAFB] pt-12">
+      <div className="">
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">

@@ -69,7 +69,7 @@ const MicroChallenges = () => {
   };
 
   return (
-    <div className="h-[400px] w-[500px] bg-gray-50 shadow-2xl p-6 rounded-4xl mt-12">
+    <div className="h-[400px] w-[480px] bg-gray-50 shadow-2xl p-4 rounded-4xl mt-12">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-6">

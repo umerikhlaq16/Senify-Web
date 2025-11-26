@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-purple-900 mt-24 pt-20 pb-12">
+    <footer className="bg-purple-900 pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-8">
         
         {/* Main Footer Card */}
